@@ -1,14 +1,14 @@
 # """Statistics Netherlands opendata API client for Python"""
 
-# __all__ = [
-#     "download_data",
-#     "get_data",
-#     "get_info",
-#     "get_meta",
-#     "get_table_list",
-#     "options",
-#     "catalog",
-# ]
+__all__ = [
+    # "download_data",
+    "get_data",
+    # "get_info",
+    "get_meta",
+    # "get_table_list",
+    # "options",
+    # "catalog",
+]
 
 import copy
 import json
@@ -390,30 +390,30 @@ def download_data(
 #         return None
 
 
-# def get_meta(table_id, name, catalog_url=None, **kwargs):
-#     """Get the metadata of a table.
+def get_meta(table_id, name, catalog_url=None, **kwargs):
+    """Get the metadata of a table.
 
-#     Parameters
-#     ----------
-#     table_id : str
-#         The identifier of the table.
-#     name : str
-#         The name of the metadata (for example DataProperties).
-#     catalog_url : str
-#         The url of the catalog. Default "opendata.cbs.nl".
-#     **kwargs :
-#         Optional arguments that ``requests.get()`` takes. For example,
-#         `proxies`, `cert` and `verify`.
+    Parameters
+    ----------
+    table_id : str
+        The identifier of the table.
+    name : str
+        The name of the metadata (for example DataProperties).
+    catalog_url : str
+        The url of the catalog. Default "opendata.cbs.nl".
+    **kwargs :
+        Optional arguments that ``requests.get()`` takes. For example,
+        `proxies`, `cert` and `verify`.
 
-#     Returns
-#     -------
-#     list
-#         A list with metadata (dict type)
-#     """
+    Returns
+    -------
+    list
+        A list with metadata (dict type)
+    """
 
-#     return _download_metadata(
-#         table_id, name, catalog_url=_get_catalog_url(catalog_url), **kwargs
-#     )
+    return _download_metadata(
+        table_id, name, catalog_url=_get_catalog_url(catalog_url), **kwargs
+    )
 
 
 def get_data(
